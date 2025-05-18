@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Sample Game",
+    "description": "Example, how to create JavaScript game",
+    "author": "AnkyloZaur",
+    "url": "games/sample1/index.html"
+  },
+  {
+    "name": "Click Counter",
+    "description": "This project already can count clicks!",
+    "author": " AnkyloZaur",
+    "url": "games/click-counter/index.html"
+  }
+]

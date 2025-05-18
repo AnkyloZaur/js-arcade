@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Game</title>
+  <style>
+    body { background: #111; color: #fff; font-family: sans-serif; text-align: center; padding: 40px; }
+    canvas { border: 1px solid #0ff; background: #000; }
+  </style>
+</head>
+<body>
+  <h1>Sample Game</h1>
+  <canvas id="gameCanvas" width="400" height="300"></canvas>
+  <script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Draw a moving circle
+    let x = 0;
+    function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.beginPath();
+    ctx.arc(x, 150, 20, 0, Math.PI * 2);
+    ctx.fillStyle = "#0ff";
+    ctx.fill();
+    x += 2;
+    if (x > canvas.width) x = 0;
+    requestAnimationFrame(draw);
+    }
+    draw();
+
+  </script>
+</body>
+</html>
